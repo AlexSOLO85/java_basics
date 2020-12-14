@@ -2,6 +2,7 @@
 public class Cat {
     private double originWeight;
     private double weight;
+    private double allEat;
 
     private double minWeight;
     private double maxWeight;
@@ -20,14 +21,24 @@ public class Cat {
 
     public void feed(Double amount) {
         weight = weight + amount;
+        allEat = allEat + amount;
     }
 
     public void drink(Double amount) {
         weight = weight + amount;
     }
 
+    public void pee(Double amount) {
+        weight = weight - amount;
+        System.out.println("Сat went to pee");
+    }
+
     public Double getWeight() {
         return weight;
+    }
+
+    public double getAllEating() {
+        return allEat;
     }
 
     public String getStatus() {

@@ -36,5 +36,20 @@ public class Loader {
             cat2.meow();
         }
         System.out.println("Condition cat2 after meow: " + cat2.getStatus());
+
+        System.out.println("==================================");
+
+        cat3.feed(150.0);
+        cat3.feed(100.0);
+        System.out.println(cat3.getAllEating());
+
+        System.out.println("==================================");
+
+        System.out.println("Cat4 weight before pee: " + cat4.getWeight());
+        cat4.pee(20.0);
+        System.out.println("Cat4 weight after pee: " + cat4.getWeight());
+        cat4.pee(20.0);
+        cat4.pee(60.0);
+        System.out.println("Cat4 weight after pee: " + cat4.getWeight());
     }
 }
