@@ -13,6 +13,16 @@ public class Cat {
     public static final double MINIMAL_WEIGHT = 1000;
     public static final double MAXIMAL_WEIGHT = 9000;
 
+    private Color color;
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
