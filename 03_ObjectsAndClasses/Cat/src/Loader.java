@@ -6,6 +6,9 @@ public class Loader {
         Cat cat3 = new Cat();
         Cat cat4 = new Cat();
         Cat cat5 = new Cat();
+        System.out.println("Initial quantity cat's: " + Cat.getCount());
+
+        System.out.println("==================================");
 
         System.out.println("Cat1 weight: " + cat1.getWeight());
         System.out.println("Cat2 weight: " + cat2.getWeight());
@@ -51,5 +54,9 @@ public class Loader {
         cat4.pee(20.0);
         cat4.pee(60.0);
         System.out.println("Cat4 weight after pee: " + cat4.getWeight());
+
+        System.out.println("==================================");
+
+        System.out.println("Final quantity cat's: " + Cat.getCount());
     }
 }

@@ -7,11 +7,14 @@ public class Cat {
     private double minWeight;
     private double maxWeight;
 
+    private static int count;
+
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
+        count++;
     }
 
     public void meow() {
@@ -33,6 +36,10 @@ public class Cat {
         System.out.println("Сat went to pee");
     }
 
+    public static int getCount() {
+        return count;
+    }
+
     public Double getWeight() {
         return weight;
     }
@@ -43,9 +50,11 @@ public class Cat {
 
     public String getStatus() {
         if(weight < minWeight) {
+            count--;
             return "Dead";
         }
         else if(weight > maxWeight) {
+            count--;
             return "Exploded";
         }
         else if(weight > originWeight) {
