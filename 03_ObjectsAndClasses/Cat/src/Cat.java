@@ -9,6 +9,10 @@ public class Cat {
 
     private static int count;
 
+    public static final int QUANTITY_EYES = 2;
+    public static final double MINIMAL_WEIGHT = 1000;
+    public static final double MAXIMAL_WEIGHT = 9000;
+
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
