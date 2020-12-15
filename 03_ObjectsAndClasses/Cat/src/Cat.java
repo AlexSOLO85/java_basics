@@ -18,22 +18,38 @@ public class Cat {
     }
 
     public void meow() {
-        weight = weight - 1;
-        System.out.println("Meow");
+        if (weight > minWeight) {
+            weight = weight - 1;
+            System.out.println("Meow");
+        } else
+            printStringDead();
     }
 
     public void feed(Double amount) {
-        weight = weight + amount;
-        allEat = allEat + amount;
+        if (weight < maxWeight) {
+            weight = weight + amount;
+            allEat = allEat + amount;
+        } else
+            printStringDead();
     }
 
     public void drink(Double amount) {
-        weight = weight + amount;
+        if (weight < maxWeight) {
+            weight = weight + amount;
+        } else
+            printStringDead();
     }
 
     public void pee(Double amount) {
-        weight = weight - amount;
-        System.out.println("Сat went to pee");
+        if (weight > minWeight) {
+            weight = weight - amount;
+            System.out.println("Сat went to pee");
+        } else
+            printStringDead();
+    }
+
+    private void printStringDead() {
+        System.out.println("Cat is dead");
     }
 
     public static int getCount() {

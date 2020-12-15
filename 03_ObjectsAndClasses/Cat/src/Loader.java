@@ -31,6 +31,7 @@ public class Loader {
             cat1.feed(100.0);
         }
         System.out.println("Condition cat1 after feeding: " + cat1.getStatus());
+        cat1.feed(100.0);
 
         System.out.println("==================================");
 
