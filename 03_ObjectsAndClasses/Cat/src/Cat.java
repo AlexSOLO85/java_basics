@@ -21,6 +21,11 @@ public class Cat {
         count++;
     }
 
+    public Cat(double weight) {
+        this();
+        this.weight = weight;
+    }
+
     public void meow() {
         if (weight > minWeight) {
             weight = weight - 1;
