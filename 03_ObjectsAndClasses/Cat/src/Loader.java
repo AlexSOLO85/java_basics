@@ -9,6 +9,8 @@ public class Loader {
         Cat cat6 = getKitten();
         Cat cat7 = getKitten();
         Cat cat8 = getKitten();
+        Cat cat9 = new Cat();
+        Cat cat10 = cat9.cloneCat();
         System.out.println("Initial quantity cat's: " + Cat.getCount());
 
         System.out.println("==================================");
@@ -24,6 +26,11 @@ public class Loader {
         System.out.println("Cat6 weight: " + cat6.getWeight());
         System.out.println("Cat7 weight: " + cat7.getWeight());
         System.out.println("Cat8 weight: " + cat8.getWeight());
+
+        System.out.println("=================================");
+
+        System.out.println("Cat9 weight: " + cat9.getWeight());
+        System.out.println("Cat10 weight: " + cat10.getWeight());
 
         System.out.println("=================================");
 

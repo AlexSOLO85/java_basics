@@ -83,6 +83,15 @@ public class Cat {
         return allEat;
     }
 
+    public Cat cloneCat() {
+        Cat cat = new Cat();
+        cat.originWeight = this.originWeight;
+        cat.weight = this.weight;
+        cat.minWeight = this.minWeight;
+        cat.maxWeight = this.maxWeight;
+        return cat;
+    }
+
     public String getStatus() {
         if(weight < minWeight) {
             count--;
