@@ -10,7 +10,7 @@ public class Loader {
         Cat cat7 = getKitten();
         Cat cat8 = getKitten();
         Cat cat9 = new Cat();
-        Cat cat10 = cat9.cloneCat();
+        Cat cat10 = Cat.copy(cat9);
         System.out.println("Initial quantity cat's: " + Cat.getCount());
 
         System.out.println("==================================");

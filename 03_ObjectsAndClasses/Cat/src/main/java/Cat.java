@@ -2,12 +2,13 @@
 public class Cat {
     private double originWeight;
     private double weight;
-    private double allEat;
+    private double allEat = 0;
 
     private double minWeight;
     private double maxWeight;
 
-    private static int count;
+    private static int count = 0;
+    private boolean isAlive;
 
     public static final int QUANTITY_EYES = 2;
     public static final double MINIMAL_WEIGHT = 1000;
@@ -28,43 +29,76 @@ public class Cat {
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
+        isAlive = true;
         count++;
     }
 
     public Cat(double weight) {
         this();
         this.weight = weight;
+        this.originWeight = weight;
+    }
+
+    public boolean isWeightNormal() {
+        return (weight > MINIMAL_WEIGHT && weight < MAXIMAL_WEIGHT);
     }
 
     public void meow() {
-        if (weight > minWeight) {
+        if (isAlive) {
             weight = weight - 1;
             System.out.println("Meow");
-        } else
-            printStringDead();
+            if (!isWeightNormal()) {
+                isAlive = false;
+                count--;
+            }
+            if (!isAlive) {
+                printStringDead();
+            }
+        }
     }
 
     public void feed(Double amount) {
-        if (weight < maxWeight) {
+        if (isAlive) {
             weight = weight + amount;
             allEat = allEat + amount;
-        } else
-            printStringDead();
+            isWeightNormal();
+            if (!isWeightNormal()) {
+                isAlive = false;
+                count--;
+            }
+            if (!isAlive) {
+                printStringDead();
+            }
+        }
     }
 
     public void drink(Double amount) {
-        if (weight < maxWeight) {
+        if (isAlive) {
             weight = weight + amount;
-        } else
-            printStringDead();
+            isWeightNormal();
+            if (!isWeightNormal()) {
+                isAlive = false;
+                count--;
+            }
+            if (!isAlive) {
+                printStringDead();
+            }
+        }
     }
 
     public void pee(Double amount) {
-        if (weight > minWeight) {
+        if (isAlive) {
             weight = weight - amount;
+            isWeightNormal();
             System.out.println("Сat went to pee");
-        } else
-            printStringDead();
+            if (!isWeightNormal()) {
+                isAlive = false;
+                count--;
+            }
+            if (!isAlive) {
+                printStringDead();
+            }
+        }
     }
 
     private void printStringDead() {
@@ -83,22 +117,20 @@ public class Cat {
         return allEat;
     }
 
-    public Cat cloneCat() {
+    public static Cat copy(Cat original) {
         Cat cat = new Cat();
-        cat.originWeight = this.originWeight;
-        cat.weight = this.weight;
-        cat.minWeight = this.minWeight;
-        cat.maxWeight = this.maxWeight;
+        cat.originWeight = original.originWeight;
+        cat.weight = original.weight;
+        cat.minWeight = original.minWeight;
+        cat.maxWeight = original.maxWeight;
         return cat;
     }
 
     public String getStatus() {
         if(weight < minWeight) {
-            count--;
             return "Dead";
         }
         else if(weight > maxWeight) {
-            count--;
             return "Exploded";
         }
         else if(weight > originWeight) {
