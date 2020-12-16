@@ -8,9 +8,9 @@ public class Main {
         System.out.println("Максимальное значение типа int: " + Integer.MAX_VALUE);
         System.out.println("Минимальное значение типа long: " + Long.MIN_VALUE);
         System.out.println("Максимальное значение типа long: " + Long.MAX_VALUE);
-        System.out.println("Минимальное значение типа float: " + Float.MIN_VALUE);
+        System.out.println("Минимальное значение типа float: " + -Float.MAX_VALUE);
         System.out.println("Максимальное значение типа float: " + Float.MAX_VALUE);
-        System.out.println("Минимальное значение типа double: " + Double.MIN_VALUE);
+        System.out.println("Минимальное значение типа double: " + -Double.MAX_VALUE);
         System.out.println("Максимальное значение типа double: " + Double.MAX_VALUE);
         System.out.println("Минимальное значение типа char: " + (int) Character.MIN_VALUE);
         System.out.println("Максимальное значение типа char: " + (int) Character.MAX_VALUE);
