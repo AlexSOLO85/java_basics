@@ -2,9 +2,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
+    private static String INPUT_TEXT = "Вася заработал 5000 рублей, Петя - 7563 рубля, а Маша - 30000 рублей";
 
     public static void main(String[] args) {
-        calculateSalarySum("Вася заработал 5000 рублей, Петя - 7563 рубля, а Маша - 30000 рублей");
+        calculateSalarySum(INPUT_TEXT);
     }
 
     public static int calculateSalarySum(String text) {
