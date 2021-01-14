@@ -1,33 +1,53 @@
 import java.util.Scanner;
 
 public class Main {
-    public static final String WRONG_EMAIL_ANSWER = "Неверный формат email";
-    
-    /* TODO:
-        Пример вывода списка Email, после ввода команды LIST в консоль:
-        test@test.com
-        hello@mail.ru
-        - каждый адрес с новой строки
-        - список должен быть отсортирован по алфавиту
-        - email в разных регистрах считается одинаковыми
-           hello@skillbox.ru == HeLLO@SKILLbox.RU
-        - вывод на печать должен быть в нижнем регистре
-           hello@skillbox.ru
-        Пример вывода сообщения об ошибке при неверном формате Email:
-        "Неверный формат email"
-    */
+    private static final String REGEX_LIST_COMMAND = "^[\\p{Upper}]+";
+    private static final String REGEX_ADD_COMMAND = "^[\\p{Upper}]+.+";
+    private static final String REGEX_SPLIT = "\\s+";
+    private static final String ADD_COMMAND = "ADD";
+    private static final String LIST_COMMAND = "LIST";
+    private static final EmailList emailList = new EmailList();
+    private static String command;
+    private static String email;
+
+    public static String inputCommand(String[] string) {
+        return string[0].trim();
+    }
+
+    public static String nameEmail(String[] string, int index) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = index; i < string.length; i++) {
+            sb.append(string[i]);
+        }
+        return sb.toString().trim();
+    }
 
     public static void main(String[] args) {
+        System.out.println("Введите команду или \"0\" для завершения: ");
         Scanner scanner = new Scanner(System.in);
-        
+
         while (true) {
             String input = scanner.nextLine();
+            String[] commands = input.split(REGEX_SPLIT);
             if (input.equals("0")) {
                 break;
+            } else if (input.matches(REGEX_LIST_COMMAND)) {
+                command = input.trim();
+            } else if (input.matches(REGEX_ADD_COMMAND)) {
+                command = inputCommand(commands);
+                email = nameEmail(commands, 1);
+            } else {
+                System.out.println("Такой команды нет.\nДоступные команды: LIST, ADD.");
             }
-            
-            //TODO: write code here
-            
+
+            switch (command) {
+                case (LIST_COMMAND):
+                    emailList.getSortedEmails();
+                    break;
+                case (ADD_COMMAND):
+                    emailList.add(email);
+                    break;
+            }
         }
     }
 }
