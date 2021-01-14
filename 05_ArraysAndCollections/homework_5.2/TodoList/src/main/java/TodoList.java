@@ -1,29 +1,47 @@
 import java.util.ArrayList;
 
 public class TodoList {
+    ArrayList<String> arrayList = new ArrayList<>();
 
     public void add(String todo) {
-        // TODO: добавьте переданное дело в конец списка
+        arrayList.add(todo);
+        System.out.printf("Добавлено дело \"%s\"\n", todo);
     }
 
     public void add(int index, String todo) {
-        // TODO: добавьте дело на указаный индекс,
-        //  проверьте возможность добавления
+        if (index < arrayList.size()) {
+            arrayList.add(index, todo);
+            System.out.printf("Добавлено дело \"%s\" с индексом \"%s\"\n", todo, index);
+        }
+        else {
+            arrayList.add(todo);
+            System.out.printf("Добавлено дело \"%s\"\n", todo);
+        }
     }
 
     public void edit(String todo, int index) {
-        // TODO: заменить дело на index переданным todo индекс,
-        //  проверьте возможность изменения
+        if (index < arrayList.size()) {
+            String previousTodo = arrayList.get(index);
+            arrayList.set(index, todo);
+            System.out.printf("Дело \"%s\" заменено на \"%s\"\n", previousTodo, todo);
+        }
     }
 
     public void delete(int index) {
-        // TODO: удалить дело находящееся по переданному индексу,
-        //  проверьте возможность удаления дела
+        if (index < arrayList.size()) {
+            System.out.printf("Дело \"%s\" удалено\n", arrayList.remove(index));
+        } else {
+            System.out.println("Дело с таким номером не существует!");
+        }
     }
 
     public ArrayList<String> getTodos() {
-        // TODO: вернуть список дел
-        return new ArrayList<>();
+        if (arrayList.isEmpty()) {
+            System.out.println("Список дел пустой. Воспользуйтесь командой ADD для добавления дела!");
+        }
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println(i + " - " + arrayList.get(i));
+        }
+        return arrayList;
     }
-
 }
