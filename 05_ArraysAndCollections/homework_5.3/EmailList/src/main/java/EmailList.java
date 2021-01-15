@@ -18,6 +18,9 @@ public class EmailList {
 
     public List<String> getSortedEmails() {
         ArrayList<String> arrayList = new ArrayList<>(treeSet);
+        if (arrayList.isEmpty()) {
+            System.out.println("Список email пустой! Воспользуйтесь командой ADD для добавления.");
+        }
         for (String str : arrayList) {
             System.out.println(str.toLowerCase(Locale.ROOT));
         }
