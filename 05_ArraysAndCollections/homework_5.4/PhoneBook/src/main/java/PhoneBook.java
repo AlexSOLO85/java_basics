@@ -1,29 +1,52 @@
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class PhoneBook {
+    private final Map<String, String> treeMap = new TreeMap<>();
 
     public void addContact(String phone, String name) {
-        // проверьте корректность формата имени и телефона
-        // если такой номер уже есть в списке, то перезаписать имя абонента
+        if (phone.matches(CommandInput.INPUT_PHONE.getCommand())
+                && name.matches(CommandInput.INPUT_NAME.getCommand())) {
+            treeMap.put(phone, name);
+            for (String key : treeMap.keySet()) {
+                if (treeMap.get(key).equals(phone)) {
+                    treeMap.put(phone, name);
+                }
+            }
+            System.out.println("Контакт сохранен!");
+        }
     }
 
     public String getNameByPhone(String phone) {
-        // формат одного контакта "Имя - Телефон"
-        // если контакт не найдены - вернуть пустую строку
-        return "";
+        Set<Map.Entry<String, String>> entrySet = treeMap.entrySet();
+        for (Map.Entry<String, String> pair : entrySet) {
+            if (phone.equals(pair.getKey())) {
+                phone = pair.getValue() + " - " + pair.getKey();
+            }
+        }
+        return phone;
     }
 
     public Set<String> getPhonesByName(String name) {
-        // формат одного контакта "Имя - Телефон"
-        // если контакт не найден - вернуть пустой TreeSet
-        return new TreeSet<>();
+        Set<String> treeSet = new TreeSet<>();
+        Set<Map.Entry<String, String>> entrySet = treeMap.entrySet();
+        for (Map.Entry<String, String> pair : entrySet) {
+            if (name.equals(pair.getValue())) {
+                name = pair.getValue() + " - " + pair.getKey();
+            }
+        }
+        treeSet.add(name);
+        return treeSet;
     }
 
     public Set<String> getAllContacts() {
-        // формат одного контакта "Имя - Телефон"
-        // если контактов нет в телефонной книге - вернуть пустой TreeSet
-        return new TreeSet<>();
+        Set<String> treeSet = new TreeSet<>();
+        for (Map.Entry<String, String> entry : treeMap.entrySet()) {
+            String name = entry.getValue() + " - " + entry.getKey();
+            treeSet.add(name);
+        }
+        for (String str : treeSet) {
+            System.out.println(str);
+        }
+        return treeSet;
     }
-
 }
