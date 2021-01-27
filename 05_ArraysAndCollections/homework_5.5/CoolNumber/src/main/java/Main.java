@@ -1,12 +1,15 @@
+import java.util.*;
+
 public class Main {
-    /*
-    TODO:
-     - реализовать методы класса CoolNumbers
-     - посчитать время поиска введимого номера в консоль в каждой из структуры данных
-     - проанализоровать полученные данные
-     */
+    private static final String input = UserInput.getLine();
+    private static final List<String> arrayList = new ArrayList<>(CoolNumbers.generateCoolNumbers());
+    private static final HashSet<String> hashSet = new HashSet<>(arrayList);
+    private static final TreeSet<String> treeSet = new TreeSet<>(arrayList);
 
     public static void main(String[] args) {
-
+        CoolNumbers.bruteForceSearchInList(arrayList, input);
+        CoolNumbers.binarySearchInList(arrayList, input);
+        CoolNumbers.searchInHashSet(hashSet, input);
+        CoolNumbers.searchInTreeSet(treeSet, input);
     }
 }
