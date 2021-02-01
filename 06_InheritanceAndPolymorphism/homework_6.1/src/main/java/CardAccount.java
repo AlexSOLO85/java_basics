@@ -1,13 +1,10 @@
 public class CardAccount extends BankAccount {
-    private double amountToTakePercent;
-
-    public double getAmountToTakePercent() {
-        return amountToTakePercent;
-    }
 
     @Override
-    public void take(double amountToTake) {
-        amountToTakePercent = (amountToTake / 100) * 1;
+    public double take(double amountToTake) {
+        double amountToTakePercent = (amountToTake / 100) * 1;
         super.take(amountToTake + amountToTakePercent);
+        System.out.println("Комиссия за снятие: " + amountToTakePercent);
+        return amountToTake;
     }
 }

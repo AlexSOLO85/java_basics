@@ -7,12 +7,24 @@ public class DepositAccount extends BankAccount {
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy");
     private final String formattedString = lastIncome.format(formatter);
 
+    private void setLastIncome(LocalDate lastIncome) {
+        this.lastIncome = lastIncome;
+    }
+
     @Override
-    public void take(double amountToTake) {
+    public double take(double amountToTake) {
         if (lastIncome.isBefore(month)) {
             super.take(amountToTake);
         } else {
             System.out.println("Операция невозможна! Последнее пополнение: " + formattedString);
         }
+        return amountToTake;
+    }
+
+    @Override
+    public double put(double amountToPut) {
+        setLastIncome(LocalDate.now());
+        super.put(amountToPut);
+        return amountToPut;
     }
 }

@@ -2,13 +2,13 @@ public class OperationAccount {
 
     public static void getOperationAccount() {
         BankAccount bankAccount = new BankAccount();
-        CardAccount cardAccount = new CardAccount();
-        DepositAccount depositAccount = new DepositAccount();
+        BankAccount cardAccount = new CardAccount();
+        BankAccount depositAccount = new DepositAccount();
 
         while (true) {
             System.out.println("Введите команду или число 10 для вызова списка команд.");
             double input = UserInput.getDouble();
-            if (input == 0.0D) {
+            if ((int) input == 0) {
                 return;
             }
             switch ((int) input) {
@@ -32,7 +32,6 @@ public class OperationAccount {
                 case 5:
                     System.out.println("Снятие с карточного счета (комиссия за снятие 1%). Введите сумму:");
                     cardAccount.take(UserInput.getDouble());
-                    System.out.println("Комиссия составила: " + cardAccount.getAmountToTakePercent());
                     break;
                 case 6:
                     System.out.println("Внесение на депозитный счет. Введите сумму:");
