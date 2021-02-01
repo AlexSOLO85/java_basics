@@ -9,7 +9,7 @@ public class BankAccount {
         return amount;
     }
 
-    public double put(double amountToPut) {
+    public void put(double amountToPut) {
         if (amountToPut < 0) {
             System.out.printf("Введена отрицательная сумма! %.2f" + System.lineSeparator(), amountToPut);
         } else {
@@ -17,10 +17,9 @@ public class BankAccount {
             System.out.printf("Счет пополнен на: %.2f" + System.lineSeparator() +
                     "Сумма на счете: %.2f" + System.lineSeparator(), amountToPut, getAmount());
         }
-        return amountToPut;
     }
 
-    public double take(double amountToTake) {
+    public void take(double amountToTake) {
         if (amountToTake < 0) {
             System.out.printf("Введена отрицательная сумма! %.2f" + System.lineSeparator(), amountToTake);
         } else if (amountToTake > getAmount()) {
@@ -31,13 +30,12 @@ public class BankAccount {
             System.out.printf("Снято со счета: %.2f" + System.lineSeparator() +
                     "Сумма на счете: %.2f" + System.lineSeparator(), amountToTake, getAmount());
         }
-        return amountToTake;
     }
 
     public boolean send(BankAccount receiver, double amount) {
         if (this.amount > amount) {
-            this.amount -= take(amount);
-            receiver.amount += receiver.put(amount);
+            take(amount);
+            receiver.put(amount);
             return true;
         }
         return false;

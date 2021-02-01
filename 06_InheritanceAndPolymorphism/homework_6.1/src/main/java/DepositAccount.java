@@ -12,19 +12,17 @@ public class DepositAccount extends BankAccount {
     }
 
     @Override
-    public double take(double amountToTake) {
+    public void take(double amountToTake) {
         if (lastIncome.isBefore(month)) {
             super.take(amountToTake);
         } else {
             System.out.println("Операция невозможна! Последнее пополнение: " + formattedString);
         }
-        return amountToTake;
     }
 
     @Override
-    public double put(double amountToPut) {
+    public void put(double amountToPut) {
         setLastIncome(LocalDate.now());
         super.put(amountToPut);
-        return amountToPut;
     }
 }
