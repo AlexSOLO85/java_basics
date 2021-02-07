@@ -1,3 +1,7 @@
+package client;
+
+import utils.ServicePersonUtils;
+
 public class IndividualBusinessman extends Client {
     private static final double THRESHOLD_PUT = 1000;
     private static final double ONE_PERCENT = 0.01;
@@ -5,21 +9,21 @@ public class IndividualBusinessman extends Client {
 
     @Override
     public void put(double amountToPut) {
-        if (service.isNotNegative(amountToPut) && amountToPut < THRESHOLD_PUT) {
+        if (ServicePersonUtils.isNotNegative(amountToPut) && amountToPut < THRESHOLD_PUT) {
             setAmount(getAmount() + (amountToPut - amountToPut * ONE_PERCENT));
         }
-        if (service.isNotNegative(amountToPut) && amountToPut >= THRESHOLD_PUT) {
+        if (ServicePersonUtils.isNotNegative(amountToPut) && amountToPut >= THRESHOLD_PUT) {
             setAmount(getAmount() + (amountToPut - amountToPut * HALF_PERCENT));
         }
-        service.printResult(amountToPut, getAmount());
+        ServicePersonUtils.printResult(amountToPut, getAmount());
     }
 
     @Override
     public void take(double amountToTake) {
-        if (service.isNotNegative(amountToTake) &&
-                service.isAmountMoreTake(amountToTake, getAmount())) {
+        if (ServicePersonUtils.isNotNegative(amountToTake) &&
+                ServicePersonUtils.isAmountMoreTake(amountToTake, getAmount())) {
             setAmount(getAmount() - amountToTake);
-            service.printResult(amountToTake, getAmount());
+            ServicePersonUtils.printResult(amountToTake, getAmount());
         }
     }
 

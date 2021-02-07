@@ -1,11 +1,13 @@
-public class ServicePerson {
+package utils;
 
-    public void printResult(double input, double amount) {
+public class ServicePersonUtils {
+
+    public static void printResult(double input, double amount) {
         System.out.printf("Счет пополнен на: %.2f" + System.lineSeparator() +
                 "Сумма на счете: %.2f" + System.lineSeparator(), input, amount);
     }
 
-    public boolean isNotNegative(double input) {
+    public static boolean isNotNegative(double input) {
         if (input <= 0) {
             System.out.printf("Введена отрицательная сумма или нулевое значение! %.2f" + System.lineSeparator(), input);
             return false;
@@ -13,7 +15,7 @@ public class ServicePerson {
         return true;
     }
 
-    public boolean isAmountMoreTake(double input, double amount) {
+    public static boolean isAmountMoreTake(double input, double amount) {
         if (input > amount) {
             System.out.printf("Недостаточно средств на счете!" + System.lineSeparator() +
                     "Запрашиваемая сумма: %.2f превышает остаток на счете: %.2f" + System.lineSeparator(), input, amount);

@@ -1,8 +1,9 @@
+package client;
+
 public abstract class Client {
     private double amount = 0.0;
-    ServicePerson service = new ServicePerson();
 
-    public void setAmount(double amount) {
+    protected void setAmount(double amount) {
         this.amount = amount;
     }
 

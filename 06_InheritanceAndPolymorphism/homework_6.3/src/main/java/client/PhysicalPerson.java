@@ -1,19 +1,23 @@
+package client;
+
+import utils.ServicePersonUtils;
+
 public class PhysicalPerson extends Client {
 
     @Override
     public void put(double amountToPut) {
-        if (service.isNotNegative(amountToPut)) {
+        if (ServicePersonUtils.isNotNegative(amountToPut)) {
             setAmount(getAmount() + amountToPut);
-            service.printResult(amountToPut, getAmount());
+            ServicePersonUtils.printResult(amountToPut, getAmount());
         }
     }
 
     @Override
     public void take(double amountToTake) {
-        if (service.isNotNegative(amountToTake) &&
-                service.isAmountMoreTake(amountToTake, getAmount())) {
+        if (ServicePersonUtils.isNotNegative(amountToTake) &&
+                ServicePersonUtils.isAmountMoreTake(amountToTake, getAmount())) {
             setAmount(getAmount() - amountToTake);
-            service.printResult(amountToTake, getAmount());
+            ServicePersonUtils.printResult(amountToTake, getAmount());
         }
     }
 

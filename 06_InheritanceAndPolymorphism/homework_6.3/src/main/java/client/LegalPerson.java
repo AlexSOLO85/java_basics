@@ -1,20 +1,24 @@
+package client;
+
+import utils.ServicePersonUtils;
+
 public class LegalPerson extends Client {
     private static final double ONE_PERCENT = 0.01;
 
     @Override
     public void put(double amountToPut) {
-        if (service.isNotNegative(amountToPut)) {
+        if (ServicePersonUtils.isNotNegative(amountToPut)) {
             setAmount(getAmount() + amountToPut);
-            service.printResult(amountToPut, getAmount());
+            ServicePersonUtils.printResult(amountToPut, getAmount());
         }
     }
 
     @Override
     public void take(double amountToTake) {
-        if (service.isNotNegative(amountToTake) &&
-                service.isAmountMoreTake(amountToTake, getAmount())) {
+        if (ServicePersonUtils.isNotNegative(amountToTake) &&
+                ServicePersonUtils.isAmountMoreTake(amountToTake, getAmount())) {
             setAmount(getAmount() - (amountToTake + amountToTake * ONE_PERCENT));
-            service.printResult(amountToTake, getAmount());
+            ServicePersonUtils.printResult(amountToTake, getAmount());
         }
     }
 
