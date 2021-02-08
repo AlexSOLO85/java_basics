@@ -1,6 +1,9 @@
 package utils;
 
-public class ServicePersonUtils {
+public final class ServicePersonUtils {
+
+    private ServicePersonUtils() {
+    }
 
     public static void printResult(double input, double amount) {
         System.out.printf("Счет пополнен на: %.2f" + System.lineSeparator() +

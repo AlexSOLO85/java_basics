@@ -4,7 +4,7 @@ import client.Client;
 import client.IndividualBusinessman;
 import client.LegalPerson;
 import client.PhysicalPerson;
-import input.UserInputUtils;
+import input.UserInput;
 
 public final class OperationPersonUtils {
     private static final String PUT_SUM = "Введите сумму зачисления: ";
@@ -29,10 +29,10 @@ public final class OperationPersonUtils {
 
         while (true) {
             System.out.println("Введите команду или число 8 для вызова списка команд.");
-            if ((int) UserInputUtils.getDouble() == 0) {
+            if ((int) UserInput.getDouble() == 0) {
                 return;
             }
-            switch ((int) UserInputUtils.getDouble()) {
+            switch ((int) UserInput.getDouble()) {
                 case 1:
                     physicalPerson.printInfo();
                     legalPerson.printInfo();
@@ -40,27 +40,27 @@ public final class OperationPersonUtils {
                     break;
                 case 2:
                     printPutSum();
-                    physicalPerson.put(UserInputUtils.getDouble());
+                    physicalPerson.put(UserInput.getDouble());
                     break;
                 case 3:
                     printTakeSum();
-                    physicalPerson.take(UserInputUtils.getDouble());
+                    physicalPerson.take(UserInput.getDouble());
                     break;
                 case 4:
                     printPutSum();
-                    legalPerson.put(UserInputUtils.getDouble());
+                    legalPerson.put(UserInput.getDouble());
                     break;
                 case 5:
                     printTakeSum();
-                    legalPerson.take(UserInputUtils.getDouble());
+                    legalPerson.take(UserInput.getDouble());
                     break;
                 case 6:
                     printPutSum();
-                    individualBusinessman.put(UserInputUtils.getDouble());
+                    individualBusinessman.put(UserInput.getDouble());
                     break;
                 case 7:
                     printTakeSum();
-                    individualBusinessman.take(UserInputUtils.getDouble());
+                    individualBusinessman.take(UserInput.getDouble());
                     break;
                 case 8:
                     System.out.println("Список команд");
