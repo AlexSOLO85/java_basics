@@ -8,7 +8,7 @@ public class TopManager implements Employee {
     private static final double FIX_SALARY = 175_000;
     private static final double PERCENT = 1.5;
     private static final double INCOME_COMPANY = 10_000_000;
-    Company company;
+    private Company company;
 
     public TopManager(Company company) {
         this.company = company;

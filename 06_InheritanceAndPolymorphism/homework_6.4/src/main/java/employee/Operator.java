@@ -6,7 +6,7 @@ import utils.FormatSalary;
 
 public class Operator implements Employee {
     private static final double FIX_SALARY = 40_000;
-    Company company;
+    private Company company;
 
     public Operator(Company company) {
         this.company = company;

@@ -10,7 +10,7 @@ public class Manager implements Employee {
     private static final double MAX_SUM = 140_000;
     private static final double PERCENT = 0.05;
     private final double salaryForCompany;
-    Company company;
+    private Company company;
 
     public Manager(Company company) {
         this.company = company;
