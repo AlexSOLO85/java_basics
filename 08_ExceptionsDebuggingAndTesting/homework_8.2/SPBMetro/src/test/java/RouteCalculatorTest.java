@@ -101,39 +101,39 @@ public class RouteCalculatorTest extends TestCase {
         routeWithTwoTransfers.add(st_3_line3);
     }
 
-    public void  testCalculateDuration() {
-        calculate_duration_single_line();
-        calculate_duration_two_line();
-        calculate_duration_three_line();
+    public void test_calculate_duration() {
+        calculateDurationSingleLine();
+        calculateDurationTwoLine();
+        calculateDurationThreeLine();
     }
 
-    public void testGetShortestRoute() {
-        distance_to_same_station();
-        stations_next_to_each_other_on_single_line();
-        opposite_stations_on_single_line();
-        opposite_stations_with_one_transfer();
-        opposite_stations_with_two_transfers();
+    public void test_get_shortest_route() {
+        distanceToSameStation();
+        stationsNextToEachOtherOnSingleLine();
+        oppositeStationsOnSingleLine();
+        oppositeStationsWithOneTransfer();
+        oppositeStationsWithTwoTransfers();
     }
 
-    private void calculate_duration_single_line() {
+    private void calculateDurationSingleLine() {
         double actual = RouteCalculator.calculateDuration(routeOnSingleLine);
         double expected = 5;
         assertEquals(expected, actual);
     }
 
-    private void calculate_duration_two_line() {
+    private void calculateDurationTwoLine() {
         double actual = RouteCalculator.calculateDuration(routeWithOneTransfer);
         double expected = 13.5;
         assertEquals(expected, actual);
     }
 
-    private void calculate_duration_three_line() {
+    private void calculateDurationThreeLine() {
         double actual = RouteCalculator.calculateDuration(routeWithTwoTransfers);
         double expected = 22;
         assertEquals(expected, actual);
     }
 
-    private void distance_to_same_station() {
+    private void distanceToSameStation() {
         List<Station> expected = new ArrayList<>(){{
             add(st_1_line1);
         }};
@@ -143,7 +143,7 @@ public class RouteCalculatorTest extends TestCase {
         assertEquals(expected, actual);
     }
 
-    private void stations_next_to_each_other_on_single_line() {
+    private void stationsNextToEachOtherOnSingleLine() {
         List<Station> expected = new ArrayList<>(){{
             add(st_1_line1);
             add(st_2_line1);
@@ -154,7 +154,7 @@ public class RouteCalculatorTest extends TestCase {
         assertEquals(expected, actual);
     }
 
-    private void opposite_stations_on_single_line() {
+    private void oppositeStationsOnSingleLine() {
         List<Station> expected = new ArrayList<>(routeOnSingleLine);
         List<Station> actual = new ArrayList<>
                 (routeCalculator.getShortestRoute(stationIndex.getStation("L1-ST-1"),
@@ -162,7 +162,7 @@ public class RouteCalculatorTest extends TestCase {
         assertEquals(expected, actual);
     }
 
-    private void opposite_stations_with_one_transfer() {
+    private void oppositeStationsWithOneTransfer() {
         List<Station> expected = new ArrayList<>(routeWithOneTransfer);
         List<Station> actual = new ArrayList<>
                 (routeCalculator.getShortestRoute(stationIndex.getStation("L1-ST-1"),
@@ -170,7 +170,7 @@ public class RouteCalculatorTest extends TestCase {
         assertEquals(expected, actual);
     }
 
-    private void opposite_stations_with_two_transfers() {
+    private void oppositeStationsWithTwoTransfers() {
         List<Station> expected = new ArrayList<>(routeWithTwoTransfers);
         List<Station> actual = new ArrayList<>
                 (routeCalculator.getShortestRoute(stationIndex.getStation("L1-ST-1"),
