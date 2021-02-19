@@ -1,5 +1,7 @@
 import core.Line;
 import core.Station;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -10,9 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+@SuppressWarnings("ALL")
 public class Main {
     private static final String DATA_FILE = "src/main/resources/map.json";
-    private static Scanner scanner;
+    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Scanner SCANNER = new Scanner(System.in);
 
     private static StationIndex stationIndex;
 
@@ -20,17 +24,27 @@ public class Main {
         RouteCalculator calculator = getRouteCalculator();
 
         System.out.println("Программа расчёта маршрутов метрополитена Санкт-Петербурга\n");
-        scanner = new Scanner(System.in);
+
         for (; ; ) {
-            Station from = takeStation("Введите станцию отправления:");
-            Station to = takeStation("Введите станцию назначения:");
+            try {
+                Station from = takeStation("Введите станцию отправления:");
+                LOGGER.info("Введите станцию отправления: " + from);
+                Station to = takeStation("Введите станцию назначения:");
+                LOGGER.info("Введите станцию назначения: " + to);
 
-            List<Station> route = calculator.getShortestRoute(from, to);
-            System.out.println("Маршрут:");
-            printRoute(route);
+                List<Station> route = calculator.getShortestRoute(from, to);
+                System.out.println("Маршрут:");
+                printRoute(route);
 
-            System.out.println("Длительность: " +
-                    RouteCalculator.calculateDuration(route) + " минут");
+                System.out.println("Длительность: " +
+                        RouteCalculator.calculateDuration(route) + " минут");
+            } catch (IllegalArgumentException ex) {
+                LOGGER.error(ex);
+                StackTraceElement[] s = ex.getStackTrace();
+                for(StackTraceElement e : s) {
+                    LOGGER.error(e);
+                }
+            }
         }
     }
 
@@ -58,12 +72,13 @@ public class Main {
     private static Station takeStation(String message) {
         for (; ; ) {
             System.out.println(message);
-            String line = scanner.nextLine().trim();
+            String line = SCANNER.nextLine().trim();
             Station station = stationIndex.getStation(line);
             if (station != null) {
                 return station;
             }
             System.out.println("Станция не найдена :(");
+            LOGGER.warn("Станция не найдена: " + line);
         }
     }
 
@@ -82,7 +97,11 @@ public class Main {
             JSONArray connectionsArray = (JSONArray) jsonData.get("connections");
             parseConnections(connectionsArray);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            LOGGER.error(ex);
+            StackTraceElement[] s = ex.getStackTrace();
+            for(StackTraceElement e : s) {
+                LOGGER.error(e);
+            }
         }
     }
 
