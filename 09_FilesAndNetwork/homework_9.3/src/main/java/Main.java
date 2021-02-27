@@ -7,6 +7,6 @@ public class Main {
         Movements movements = new Movements(MOVEMENT_CSV);
         movements.getExpenseSum();
         movements.getIncomeSum();
-        Movements.getUniqueExpenseSum();
+        movements.getUniqueExpenseSum();
     }
 }

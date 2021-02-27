@@ -12,10 +12,10 @@ public final class Movements {
     private final static String EXPENSE_OPERATION = "\\";
     private final static int INDEX_STRING = 1;
 
-    private static final List<Movements> MOVEMENTS = new ArrayList<>();
     private String operationDescription;
     private double income;
     private double expense;
+    private List<Movements> movements = new ArrayList<>();
 
     public Movements(String operationDescription,
                      double income, double expense) {
@@ -25,7 +25,7 @@ public final class Movements {
     }
 
     public Movements(String pathMovementsCsv) {
-        Parser.loadInfoFromFile(pathMovementsCsv);
+        movements = Parser.loadInfoFromFile(pathMovementsCsv);
     }
 
     private String getOperationDescription() {
@@ -40,12 +40,8 @@ public final class Movements {
         return expense;
     }
 
-    public static List<Movements> getMovements() {
-        return MOVEMENTS;
-    }
-
     public double getExpenseSum() {
-        double sum = MOVEMENTS.stream()
+        double sum = movements.stream()
                 .mapToDouble(Movements::getExpense)
                 .sum();
         System.out.printf("Сумма расходов: %.2f руб.\n", sum);
@@ -54,7 +50,7 @@ public final class Movements {
     }
 
     public double getIncomeSum() {
-        double sum = MOVEMENTS.stream()
+        double sum = movements.stream()
                 .mapToDouble(Movements::getIncome)
                 .sum();
         System.out.printf("Сумма доходов: %.2f руб.\n", sum);
@@ -62,11 +58,11 @@ public final class Movements {
         return sum;
     }
 
-    public static void getUniqueExpenseSum() {
+    public void getUniqueExpenseSum() {
         System.out.println("Суммы расходов по организациям:");
         System.out.println("===============================");
         getAllOperations().forEach(operation -> {
-            double sum = MOVEMENTS.stream()
+            double sum = movements.stream()
                     .filter(s -> s.getOperationDescription().contains(operation))
                     .mapToDouble(Movements::getExpense).sum();
             String[] strings = operation.split(REGEX_SLASH);
@@ -75,8 +71,8 @@ public final class Movements {
         });
     }
 
-    private static List<String> getAllOperations() {
-        return Movements.MOVEMENTS.stream()
+    private List<String> getAllOperations() {
+        return movements.stream()
                 .map(s -> s.getOperationDescription().split(REGEX_OPERATION_SPLIT))
                 .filter(s -> s[INDEX_STRING].contains(EXPENSE_OPERATION))
                 .map(s -> s[INDEX_STRING].substring(s[INDEX_STRING].indexOf(EXPENSE_OPERATION)))

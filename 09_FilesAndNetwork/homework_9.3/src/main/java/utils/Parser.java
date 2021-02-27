@@ -16,7 +16,8 @@ public final class Parser {
     private static final String REGEX_QUOTES = "\"";
     private static final String EMPTY_STRING = "";
 
-    public static void loadInfoFromFile(String path) {
+    public static List<Movements> loadInfoFromFile(String path) {
+        List<Movements> movements = new ArrayList<>();
         try {
             List<String> fileLines = Files.readAllLines(Paths.get(path));
             for (int i = 1; i < fileLines.size(); i++) {
@@ -33,7 +34,7 @@ public final class Parser {
                         columnList.add(str);
                     }
                 }
-                Movements.getMovements().add(new Movements(
+                movements.add(new Movements(
                         columnList.get(INDEX_OPERATION_DESCRIPTION),
                         Double.parseDouble(columnList.get(INDEX_INCOME)),
                         Double.parseDouble(columnList.get(INDEX_EXPENSE))));
@@ -41,6 +42,7 @@ public final class Parser {
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
+        return movements;
     }
 
     private static boolean isColumnPart(String text) {
