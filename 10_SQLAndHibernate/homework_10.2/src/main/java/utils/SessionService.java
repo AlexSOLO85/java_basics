@@ -1,9 +1,12 @@
 package utils;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class SessionUtil {
+import java.io.Closeable;
+
+public class SessionService implements Closeable {
     private Session session;
     private Transaction transaction;
 
@@ -16,7 +19,7 @@ public class SessionUtil {
     }
 
     public Session openSession() {
-        return HibernateUtil.getSessionFactory().openSession();
+        return HibernateSessionFactory.getSessionFactory().openSession();
     }
 
     public void openTransactionSession() {
@@ -24,12 +27,15 @@ public class SessionUtil {
         transaction = session.beginTransaction();
     }
 
-    public void closeSession() {
-        session.close();
-    }
-
     public void closeTransactionSession() {
         transaction.commit();
-        closeSession();
+    }
+
+    @Override
+    public void close() throws HibernateException {
+        if (session != null) {
+            session.close();
+            System.out.println("Session closed");
+        }
     }
 }

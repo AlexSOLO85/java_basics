@@ -10,14 +10,14 @@
 
     <appender name="FILE"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/hibernate.log</file>
+        <file>logs/hibernate_test.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>%d{yyyy-MM-dd_HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
             </Pattern>
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <FileNamePattern>logs/hibernate.%i.log.zip</FileNamePattern>
+            <FileNamePattern>logs/hibernate_test.%i.log.zip</FileNamePattern>
             <MinIndex>1</MinIndex>
             <MaxIndex>10</MaxIndex>
         </rollingPolicy>
@@ -29,7 +29,7 @@
 
     </appender>
 
-    <logger name="org.hibernate.type" level="INFO" />
+    <logger name="org.hibernate.type" level="TRACE" />
     <logger name="org.hibernate" level="INFO" />
 
     <root level="INFO">

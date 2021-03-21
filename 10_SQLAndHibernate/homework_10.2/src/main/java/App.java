@@ -1,6 +1,6 @@
 import entity.Course;
 import service.CourseService;
-import utils.HibernateUtil;
+import utils.HibernateSessionFactory;
 
 public class App {
     private static final Integer COURSE_ID = 1;
@@ -12,6 +12,6 @@ public class App {
         Integer countStudents = course.getStudentsCount();
         System.out.printf("Курс: \"%s\", количество студентов: \"%s\"\n",
                 courseName, countStudents);
-        HibernateUtil.shutdown();
+        HibernateSessionFactory.shutdown();
     }
 }

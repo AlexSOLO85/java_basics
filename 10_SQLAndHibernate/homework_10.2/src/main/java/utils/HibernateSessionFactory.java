@@ -1,15 +1,16 @@
 package utils;
 
+import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateUtil {
+public class HibernateSessionFactory {
     private static final SessionFactory sessionFactory = buildSessionFactory();
 
     protected static SessionFactory buildSessionFactory() {
         try {
             return new Configuration().configure().buildSessionFactory();
-        } catch (Throwable ex) {
+        } catch (HibernateException ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
             throw new ExceptionInInitializerError(ex);
         }
@@ -20,6 +21,9 @@ public class HibernateUtil {
     }
 
     public static void shutdown() {
-        getSessionFactory().close();
+        if (getSessionFactory() != null) {
+            getSessionFactory().close();
+            System.out.println("SessionFactory destroyed");
+        }
     }
 }
