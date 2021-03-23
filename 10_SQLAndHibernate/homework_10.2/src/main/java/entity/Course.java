@@ -1,10 +1,16 @@
 package entity;
 
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
 
 import javax.persistence.*;
+import java.util.List;
 
-@Data
+@Getter
+@Setter
+@EqualsAndHashCode
 @Entity
 @Table(name = "courses")
 public class Course {
@@ -22,8 +28,9 @@ public class Course {
 
     private String description;
 
-    @Column(name = "teacher_id")
-    private Integer teacherId;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "teacher_id")
+    private Teacher teacher;
 
     @Column(name = "students_count")
     private Integer studentsCount;
@@ -32,4 +39,15 @@ public class Course {
 
     @Column(name = "price_per_hour")
     private Float pricePerHour;
+
+    @OneToMany(mappedBy = "course")
+    private List<Subscription> subscriptions;
+
+    public Course() {
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + "-" + getId();
+    }
 }

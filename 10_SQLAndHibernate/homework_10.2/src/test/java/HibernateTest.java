@@ -21,8 +21,8 @@ public class HibernateTest {
     private static final Integer NEW_PRICE = 30000;
     private static final String SQL = "SELECT MAX(courses.id) FROM courses";
 
-    CourseService courseService = new CourseService();
-    Course course = new Course();
+    private final CourseService courseService = new CourseService(Course.class);
+    private final Course course = new Course();
 
     @BeforeAll
     public static void setup() {
@@ -58,6 +58,7 @@ public class HibernateTest {
         course.setName(NAME);
         course.setType(TYPE);
         course.setPrice(NEW_PRICE);
+        session.close();
         courseService.update(course);
         assertEquals("Новый курс", course.getName());
     }
@@ -88,6 +89,7 @@ public class HibernateTest {
         System.out.println("Running test_delete");
         Integer id = (Integer) session.createSQLQuery(SQL).uniqueResult();
         Course course = session.find(Course.class, id);
+        session.close();
         courseService.delete(course);
         Assertions.assertNull(null);
     }
