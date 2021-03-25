@@ -38,6 +38,7 @@ public class App {
 
         QueryHql queryHql = new QueryHql();
         queryHql.getQuery();
+        queryHql.createAndFillTable();
 
         HibernateSessionFactory.shutdown();
     }
