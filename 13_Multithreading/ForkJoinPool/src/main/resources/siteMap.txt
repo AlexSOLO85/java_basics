@@ -1,0 +1,215 @@
+https://skillbox.ru
+	https://skillbox.ru/
+	https://skillbox.ru/company/
+	https://skillbox.ru/media/
+	-	https://skillbox.ru/media/?section=0
+	-	-	https://skillbox.ru/media/?section=0&page=page-2
+	-	-	https://skillbox.ru/media/?section=0&page=page-3
+	-	-	https://skillbox.ru/media/?section=0&page=page-4
+	-	-	https://skillbox.ru/media/?section=0&page=page-5
+	-	-	https://skillbox.ru/media/?section=0&page=page-268
+	-	https://skillbox.ru/media/?section=8
+	-	-	https://skillbox.ru/media/?section=8&page=page-2
+	-	-	https://skillbox.ru/media/?section=8&page=page-3
+	-	-	https://skillbox.ru/media/?section=8&page=page-4
+	-	-	https://skillbox.ru/media/?section=8&page=page-5
+	-	-	https://skillbox.ru/media/?section=8&page=page-67
+	-	https://skillbox.ru/media/?section=10
+	-	-	https://skillbox.ru/media/?section=10&page=page-2
+	-	-	https://skillbox.ru/media/?section=10&page=page-3
+	-	-	https://skillbox.ru/media/?section=10&page=page-4
+	-	-	https://skillbox.ru/media/?section=10&page=page-5
+	-	-	https://skillbox.ru/media/?section=10&page=page-59
+	-	https://skillbox.ru/media/?section=18
+	-	-	https://skillbox.ru/media/?section=18&page=page-2
+	-	-	https://skillbox.ru/media/?section=18&page=page-3
+	-	-	https://skillbox.ru/media/?section=18&page=page-4
+	-	-	https://skillbox.ru/media/?section=18&page=page-5
+	-	-	https://skillbox.ru/media/?section=18&page=page-28
+	-	https://skillbox.ru/media/?section=21
+	-	-	https://skillbox.ru/media/?section=21&page=page-2
+	-	-	https://skillbox.ru/media/?section=21&page=page-3
+	-	-	https://skillbox.ru/media/?section=21&page=page-4
+	-	-	https://skillbox.ru/media/?section=21&page=page-5
+	-	-	https://skillbox.ru/media/?section=21&page=page-12
+	-	https://skillbox.ru/media/?section=9
+	-	-	https://skillbox.ru/media/?section=9&page=page-2
+	-	-	https://skillbox.ru/media/?section=9&page=page-3
+	-	-	https://skillbox.ru/media/?section=9&page=page-4
+	-	-	https://skillbox.ru/media/?section=9&page=page-5
+	-	-	https://skillbox.ru/media/?section=9&page=page-48
+	-	https://skillbox.ru/media/?section=11
+	-	-	https://skillbox.ru/media/?section=11&page=page-2
+	-	-	https://skillbox.ru/media/?section=11&page=page-3
+	-	-	https://skillbox.ru/media/?section=11&page=page-4
+	-	-	https://skillbox.ru/media/?section=11&page=page-5
+	-	-	https://skillbox.ru/media/?section=11&page=page-23
+	-	https://skillbox.ru/media/?section=17
+	-	-	https://skillbox.ru/media/?section=17&page=page-2
+	-	-	https://skillbox.ru/media/?section=17&page=page-3
+	-	-	https://skillbox.ru/media/?section=17&page=page-4
+	-	-	https://skillbox.ru/media/?section=17&page=page-5
+	-	-	https://skillbox.ru/media/?section=17&page=page-8
+	-	https://skillbox.ru/media/?section=22
+	-	-	https://skillbox.ru/media/?section=22&page=page-2
+	-	-	https://skillbox.ru/media/?section=22&page=page-3
+	-	-	https://skillbox.ru/media/?section=22&page=page-4
+	-	-	https://skillbox.ru/media/?section=22&page=page-5
+	-	-	https://skillbox.ru/media/?section=22&page=page-26
+	-	https://skillbox.ru/media/education/dlya-stroitelstva-studencheskikh-kampusov-mirovogo-urovnya-vybrali-vosem-lokatsiy/
+	-	https://skillbox.ru/media/education/
+	-	-	https://skillbox.ru/media/education/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/education/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/education/?PAGEN_1=4
+	-	-	https://skillbox.ru/media/education/?PAGEN_1=5
+	-	-	https://skillbox.ru/media/education/?PAGEN_1=39
+	-	https://skillbox.ru/media/design/
+	-	-	https://skillbox.ru/media/design/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/design/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/design/?PAGEN_1=4
+	-	-	https://skillbox.ru/media/design/?PAGEN_1=5
+	-	-	https://skillbox.ru/media/design/?PAGEN_1=41
+	-	https://skillbox.ru/media/design/intervals-fest/
+	-	https://skillbox.ru/media/gamedev/
+	-	-	https://skillbox.ru/media/gamedev/gta-v-vsye-eshchye-prinosit-rockstar-25-mln-dollarov-v-den/
+	-	-	https://skillbox.ru/media/gamedev/v-otdele-kontrolya-kachestva-activision-blizzard-adskie-usloviya-truda/
+	-	-	https://skillbox.ru/media/gamedev/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/gamedev/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/gamedev/?PAGEN_1=4
+	-	-	https://skillbox.ru/media/gamedev/?PAGEN_1=5
+	-	-	https://skillbox.ru/media/gamedev/?PAGEN_1=66
+	-	https://skillbox.ru/media/gamedev/roblox-priobretaet-chatplatformu-guilded/
+	-	https://skillbox.ru/media/business/
+	-	-	https://skillbox.ru/media/business/v-mayami-zapustili-sobstvennuyu-kriptovalyutu/
+	-	-	https://skillbox.ru/media/business/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/business/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/business/?PAGEN_1=4
+	-	-	https://skillbox.ru/media/business/?PAGEN_1=5
+	-	-	https://skillbox.ru/media/business/?PAGEN_1=30
+	-	https://skillbox.ru/media/business/pochta-rossii-zayavit-o-sebe-v-it/
+	-	https://skillbox.ru/media/gamedev/altor-priobretaet-kontrolnyy-paket-aktsiy-izdatelya-raw-fury/
+	-	https://skillbox.ru/media/gamedev/control-prodolzhaet-prinosit-pribyl-remedy/
+	-	https://skillbox.ru/media/gamedev/nintendo-okonchatelno-ogranichila-deyatelnost-piratskogo-sayta-romuniverse/
+	-	https://skillbox.ru/media/business/algoritm-proverit-kompanii-na-ekologichnost-i-gendernuyu-neytralnost/
+	-	https://skillbox.ru/media/topic/news/
+	-	-	https://skillbox.ru/media/topic/news/code/
+	-	-	https://skillbox.ru/media/topic/news/marketing/
+	-	-	-	https://skillbox.ru/media/topic/news/marketing/?PAGEN_2=2
+	-	-	-	https://skillbox.ru/media/topic/news/marketing/?PAGEN_2=3
+	-	-	-	https://skillbox.ru/media/topic/news/marketing/?PAGEN_2=4
+	-	-	https://skillbox.ru/media/topic/news/management/
+	-	-	-	https://skillbox.ru/media/topic/news/management/?PAGEN_2=2
+	-	-	-	https://skillbox.ru/media/topic/news/management/?PAGEN_2=3
+	-	-	-	https://skillbox.ru/media/topic/news/management/?PAGEN_2=4
+	-	-	-	https://skillbox.ru/media/topic/news/management/?PAGEN_2=5
+	-	-	https://skillbox.ru/media/topic/news/growth/
+	-	-	https://skillbox.ru/media/topic/news/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/topic/news/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/topic/news/?PAGEN_1=4
+	-	-	https://skillbox.ru/media/topic/news/?PAGEN_1=5
+	-	-	https://skillbox.ru/media/topic/news/?PAGEN_1=118
+	-	https://skillbox.ru/media/education/dokazatelnoe-obrazovanie/
+	-	https://skillbox.ru/media/topic/guides/
+	-	-	https://skillbox.ru/media/topic/guides/code/
+	-	-	-	https://skillbox.ru/media/topic/guides/code/?PAGEN_2=2
+	-	-	-	https://skillbox.ru/media/topic/guides/code/?PAGEN_2=3
+	-	-	-	https://skillbox.ru/media/topic/guides/code/?PAGEN_2=4
+	-	-	-	https://skillbox.ru/media/topic/guides/code/?PAGEN_2=5
+	-	-	-	https://skillbox.ru/media/topic/guides/code/?PAGEN_2=6
+	-	-	https://skillbox.ru/media/topic/guides/marketing/
+	-	-	-	https://skillbox.ru/media/topic/guides/marketing/?PAGEN_2=2
+	-	-	-	https://skillbox.ru/media/topic/guides/marketing/?PAGEN_2=3
+	-	-	-	https://skillbox.ru/media/topic/guides/marketing/?PAGEN_2=4
+	-	-	-	https://skillbox.ru/media/topic/guides/marketing/?PAGEN_2=5
+	-	-	https://skillbox.ru/media/topic/guides/management/
+	-	-	-	https://skillbox.ru/media/topic/guides/management/?PAGEN_2=2
+	-	-	https://skillbox.ru/media/topic/guides/growth/
+	-	-	https://skillbox.ru/media/topic/guides/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/topic/guides/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/topic/guides/?PAGEN_1=4
+	-	-	https://skillbox.ru/media/topic/guides/?PAGEN_1=5
+	-	-	https://skillbox.ru/media/topic/guides/?PAGEN_1=20
+	-	https://skillbox.ru/media/code/biblioteka-pandas-profiling/
+	-	https://skillbox.ru/media/code/
+	-	-	https://skillbox.ru/media/code/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/code/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/code/?PAGEN_1=4
+	-	-	https://skillbox.ru/media/code/?PAGEN_1=5
+	-	-	https://skillbox.ru/media/code/?PAGEN_1=30
+	-	https://skillbox.ru/media/topic/articles/
+	-	-	https://skillbox.ru/media/topic/articles/marketing/
+	-	-	-	https://skillbox.ru/media/topic/articles/marketing/?PAGEN_2=2
+	-	-	-	https://skillbox.ru/media/topic/articles/marketing/?PAGEN_2=3
+	-	-	-	https://skillbox.ru/media/topic/articles/marketing/?PAGEN_2=4
+	-	-	-	https://skillbox.ru/media/topic/articles/marketing/?PAGEN_2=5
+	-	-	-	https://skillbox.ru/media/topic/articles/marketing/?PAGEN_2=12
+	-	-	https://skillbox.ru/media/topic/articles/growth/
+	-	-	-	https://skillbox.ru/media/topic/articles/growth/?PAGEN_2=2
+	-	-	https://skillbox.ru/media/topic/articles/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/topic/articles/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/topic/articles/?PAGEN_1=4
+	-	-	https://skillbox.ru/media/topic/articles/?PAGEN_1=5
+	-	-	https://skillbox.ru/media/topic/articles/?PAGEN_1=70
+	-	https://skillbox.ru/media/education/knizhnaya-polka-spiral-obucheniya/
+	-	https://skillbox.ru/media/marketing/kak-ispolzovat-yandeks-vzglyad/
+	-	https://skillbox.ru/media/marketing/
+	-	-	https://skillbox.ru/media/marketing/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/marketing/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/marketing/?PAGEN_1=4
+	-	-	https://skillbox.ru/media/marketing/?PAGEN_1=5
+	-	-	https://skillbox.ru/media/marketing/?PAGEN_1=28
+	-	https://skillbox.ru/media/design/interview-danya-vidmich/
+	-	https://skillbox.ru/media/growth/kak-razvivatsya-v-songraytinge/
+	-	https://skillbox.ru/media/growth/
+	-	-	https://skillbox.ru/media/growth/?PAGEN_1=2
+	-	-	https://skillbox.ru/media/growth/?PAGEN_1=3
+	-	-	https://skillbox.ru/media/growth/?PAGEN_1=4
+	-	https://skillbox.ru/media/code/luchshiy-sovet-programmistu/
+	-	https://skillbox.ru/media/?page=page-2
+	-	https://skillbox.ru/media/?page=page-3
+	-	https://skillbox.ru/media/?page=page-4
+	-	https://skillbox.ru/media/?page=page-5
+	-	https://skillbox.ru/media/?page=page-268
+	https://skillbox.ru/code/
+	-	https://skillbox.ru/code/?page=2
+	-	https://skillbox.ru/code/?page=3
+	-	https://skillbox.ru/code/?page=4
+	-	https://skillbox.ru/code/?page=5
+	https://skillbox.ru/design/
+	-	https://skillbox.ru/design/?page=2
+	-	https://skillbox.ru/design/?page=3
+	-	https://skillbox.ru/design/?page=4
+	-	https://skillbox.ru/design/?page=5
+	-	https://skillbox.ru/design/?page=10
+	https://skillbox.ru/marketing/
+	-	https://skillbox.ru/marketing/?page=2
+	-	https://skillbox.ru/marketing/?page=3
+	-	https://skillbox.ru/marketing/?page=4
+	-	https://skillbox.ru/marketing/?page=5
+	-	https://skillbox.ru/marketing/?page=6
+	https://skillbox.ru/management/
+	-	https://skillbox.ru/management/?page=2
+	-	https://skillbox.ru/management/?page=3
+	-	https://skillbox.ru/management/?page=4
+	-	https://skillbox.ru/management/?page=5
+	-	https://skillbox.ru/management/?page=8
+	https://skillbox.ru/games/
+	-	https://skillbox.ru/games/?page=2
+	-	https://skillbox.ru/games/?page=3
+	-	https://skillbox.ru/games/?page=4
+	-	https://skillbox.ru/games/?page=5
+	https://skillbox.ru/other/
+	-	https://skillbox.ru/other/?page=2
+	https://skillbox.ru/multimedia/
+	-	https://skillbox.ru/multimedia/?page=2
+	-	https://skillbox.ru/multimedia/?page=3
+	https://skillbox.ru/for-business/
+	-	https://skillbox.ru/for-business/?page=2
+	-	https://skillbox.ru/for-business/?page=3
+	https://skillbox.ru/career/
+	https://skillbox.ru/otzyvy/
+	https://skillbox.ru/contacts/
+	https://skillbox.ru/jobs/
+	https://skillbox.ru/teachers/
+	https://skillbox.ru/skillbox-licence/
+	https://skillbox.ru/payments/
