@@ -54,7 +54,7 @@ public class TaskController {
     }
 
     @DeleteMapping("/tasks")
-    public List<Task> deleteTaskAll() {
-        return Storage.deleteTaskAll();
+    public void deleteTaskAll() {
+        Storage.deleteTaskAll();
     }
 }

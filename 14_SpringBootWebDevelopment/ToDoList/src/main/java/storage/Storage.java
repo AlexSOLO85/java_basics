@@ -13,10 +13,8 @@ public class Storage {
     }
 
     public static Task getTaskById(int id) {
-        if (storage.containsKey(id)) {
-            return storage.get(id);
-        }
-        return null;
+        Optional<Task> optional = Optional.empty();
+        return optional.orElse(storage.get(id));
     }
 
     public static int addTask(Task task) {
@@ -44,8 +42,7 @@ public class Storage {
         return storage.remove(id, storage.get(id));
     }
 
-    public static List<Task> deleteTaskAll() {
+    public static void deleteTaskAll() {
         storage.clear();
-        return null;
     }
 }
