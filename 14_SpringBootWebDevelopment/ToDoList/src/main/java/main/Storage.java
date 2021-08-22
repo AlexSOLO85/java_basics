@@ -1,6 +1,6 @@
-package storage;
+package main;
 
-import entity.Task;
+import main.model.Task;
 
 import java.util.*;
 
