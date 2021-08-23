@@ -6,26 +6,26 @@ import java.util.*;
 
 public class Storage {
     private static int index = 1;
-    private static final Map<Integer, Task> storage = new HashMap<>();
+    private static final Map<Integer, Task> STORAGE = new HashMap<>();
 
     public static List<Task> getTaskAll() {
-        return new ArrayList<>(storage.values());
+        return new ArrayList<>(STORAGE.values());
     }
 
     public static Task getTaskById(int id) {
         Optional<Task> optional = Optional.empty();
-        return optional.orElse(storage.get(id));
+        return optional.orElse(STORAGE.get(id));
     }
 
     public static int addTask(Task task) {
         task.setId(index);
-        storage.put(index, task);
+        STORAGE.put(index, task);
         return index++;
     }
 
     public static void updateTaskById(int id, Task task) {
-        if (storage.containsKey(id)) {
-            storage.put(id, task);
+        if (STORAGE.containsKey(id)) {
+            STORAGE.put(id, task);
         }
     }
 
@@ -39,10 +39,10 @@ public class Storage {
     }
 
     public static boolean deleteTaskById(int id) {
-        return storage.remove(id, storage.get(id));
+        return STORAGE.remove(id, STORAGE.get(id));
     }
 
     public static void deleteTaskAll() {
-        storage.clear();
+        STORAGE.clear();
     }
 }
