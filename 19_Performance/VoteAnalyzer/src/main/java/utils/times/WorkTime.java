@@ -1,12 +1,14 @@
+package utils.times;
+
 import java.util.Date;
 import java.util.TreeSet;
 
 public class WorkTime {
 
-    private TreeSet<TimePeriod> periods;
+    private final TreeSet<TimePeriod> periods;
 
     /**
-     * Set of TimePeriod objects
+     * Set of utils.times.TimePeriod objects
      */
     public WorkTime() {
         periods = new TreeSet<>();
@@ -25,13 +27,13 @@ public class WorkTime {
     }
 
     public String toString() {
-        String line = "";
+        StringBuilder line = new StringBuilder();
         for (TimePeriod period : periods) {
-            if (!line.isEmpty()) {
-                line += ", ";
+            if (line.length() > 0) {
+                line.append(", ");
             }
-            line += period;
+            line.append(period);
         }
-        return line;
+        return line.toString();
     }
 }
