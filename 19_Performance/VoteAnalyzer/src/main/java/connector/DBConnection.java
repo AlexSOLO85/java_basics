@@ -9,22 +9,43 @@ public class DBConnection {
 
     private static Connection connection;
 
-    private static String dbName = "learn";
-    private static String dbUser = "root";
-    private static String dbPass = "ya78yrc8n4w3984";
+    private static final String DB_NAME = "learn";
+    private static final String DB_USER = "root";
+    private static final String DB_PASS = "ZiVwU78onhx3b";
 
     public static Connection getConnection() {
         if (connection == null) {
             try {
                 connection = DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/" + dbName +
-                                "?user=" + dbUser + "&password=" + dbPass);
+                        "jdbc:mysql://localhost:3306/" + DB_NAME +
+                                "?user=" + DB_USER + "&password=" + DB_PASS);
                 connection.createStatement().execute("DROP TABLE IF EXISTS voter_count");
                 connection.createStatement().execute("CREATE TABLE voter_count(" +
                         "id INT NOT NULL AUTO_INCREMENT, " +
                         "name TINYTEXT NOT NULL, " +
                         "birthDate DATE NOT NULL, " +
                         "`count` INT NOT NULL, " +
+                        "PRIMARY KEY(id))");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return connection;
+    }
+
+    public static Connection getConnectionVoters() {
+        if (connection == null) {
+            try {
+                connection = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/" + DB_NAME + "?rewriteBatchedStatements=true" +
+                                "&user=" + DB_USER + "&password=" + DB_PASS);
+                connection.createStatement().execute("DROP TABLE IF EXISTS voters");
+                connection.createStatement().execute("CREATE TABLE voters(" +
+                        "id INT NOT NULL AUTO_INCREMENT, " +
+                        "name TINYTEXT NOT NULL, " +
+                        "birthDate DATE NOT NULL, " +
+                        "station INT NOT NULL, " +
+                        "time DATE NOT NULL, " +
                         "PRIMARY KEY(id))");
             } catch (SQLException e) {
                 e.printStackTrace();
